@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:id="@+id/scrollView"
+    android:background="#ffffde72">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1"
+    android:id="@+id/layout">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleCr" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="331dp"
+        android:id="@+id/content"
+        android:gravity="top|left" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="Type:"
+            android:id="@+id/textView"
+            android:layout_weight="0.48"
+            android:phoneNumber="true"
+            android:gravity="center" />
+
+        <Spinner
+            android:layout_width="192dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/spinner"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time alert"
+            android:id="@+id/checkBox"
+            android:layout_weight="0.07"
+            android:checked="false"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:ems="10"
+            android:id="@+id/timeField"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Alert: Notify one hour before deadline"
+        android:id="@+id/notification"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/add_button"
+            android:onClick="onClick_AddMemo" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/cancel_button"
+            android:layout_alignParentRight="true"
+            android:onClick="goBack"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+</ScrollView>
